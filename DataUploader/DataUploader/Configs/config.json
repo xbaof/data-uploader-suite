@@ -1,0 +1,31 @@
+{
+  "ThirdDB": "**/bin",
+  "BaseUrl": "**/bin",
+  "PKI": "**/bin",
+  "Tasks": [
+    {
+      "Name": "数据同步任务示例",
+      "Cron": "0 0/2 * * * ?",
+      "AssemblyName": "DataUploader",
+      "ClassName": "Tasks.Jobs.DataSyncJob",
+      "Enable": true,
+      "Params": "{\"Description\":\"示例任务参数\"}"
+    },
+    {
+      "Name": "执行具体任务逻辑",
+      "AssemblyName": "DataUploader",
+      "Cron": "0 0/2 * * * ?",
+      "ClassName": "Tasks.Jobs.SampleJob",
+      "Enable": true,
+      "Params": null
+    },
+    {
+      "Name": "清理上传日志数据",
+      "Cron": "0 0 2 * * ?", 
+      "AssemblyName": "DataUploader",
+      "ClassName": "Tasks.Jobs.CleanupUploadLogJob",
+      "Enable": true,
+      "Params": null
+    }
+  ]
+}
