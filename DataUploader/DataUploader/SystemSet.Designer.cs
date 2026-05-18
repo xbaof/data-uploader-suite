@@ -107,7 +107,6 @@
             // 
             // input_HardwareFingerprint
             // 
-            input_HardwareFingerprint.BackColor = SystemColors.Control;
             input_HardwareFingerprint.Font = new Font("Microsoft YaHei UI", 9F);
             input_HardwareFingerprint.Location = new Point(84, 3);
             input_HardwareFingerprint.Margin = new Padding(0, 3, 3, 3);
